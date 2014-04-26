@@ -19,7 +19,7 @@ html {
 p.main {
 	padding-left: 20%;
 	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-bottom: 10%;
 }
 
 p.link {
@@ -61,10 +61,6 @@ span {
 
 #mail {
 	background-image: url('images/mail.png');
-}
-
-#doc {
-	background-image: url('images/document.png');
 }
 
 a:link {
