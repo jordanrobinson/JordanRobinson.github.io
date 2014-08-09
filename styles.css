@@ -114,6 +114,7 @@ td {
 	border: 1px solid #222222;
 	width: 10px;
 	height: 10px;
+	padding: 0px;
 	-webkit-transition: background-color 150ms linear;
     -moz-transition: background-color 150ms linear;
     -o-transition: background-color 150ms linear;

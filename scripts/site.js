@@ -1,8 +1,8 @@
 var docHeight = $(document).height();
 var rightBoxWidth = $('#right-box').width();
 var leftBoxWidth = $('#left-box').width();
-var cellHeight = 14;
-var cellWidth = 14;
+var cellHeight = 12;
+var cellWidth = 12;
 var tdId = 0;
 
 var addCells = function(boxWidth, boxId) {
