@@ -1,19 +1,13 @@
 html {
-	background-color: #222222;
-	margin-left: auto;
-	margin-right: auto;
-	width: 60%;
 	height: 100%;
+	width: 100%;
+	background-color: #222222;
+	margin: 0;
+}
 
-	padding-left: 10px;
-	padding-right: 10px;
-	
-	border-left: 2px solid #66D9EF;
-	border-right: 2px solid #66D9EF;
-
-	color: #DFDFDF;
-	font-family: Verdana;
-	font-size: 13pt;
+body {
+	margin: 0;
+	z-index: auto;
 }
 
 p.main {
@@ -27,7 +21,7 @@ p.link {
 	margin-bottom: 20px;
 }
 
-div {
+div.container {
 	position: relative;
 	padding-top: 32px;
 	padding-left: 32px;
@@ -37,6 +31,44 @@ div {
 	display: block;
 	padding-bottom: 40px;
 }
+
+div#page {
+	display: inline-block;
+	position: relative;
+    color: #dfdfdf;
+    font-family: Verdana;
+    font-size: 13pt;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 62%;
+    position: absolute;
+}
+
+div#left-box {
+	float: left;
+	width: 19%;
+	height: 100%;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+    border-right: 2px solid #66d9ef;
+    overflow: hidden;
+}
+
+div#right-box {
+	float: right;
+	width: 19%;
+	height: 100%;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+    border-left: 2px solid #66d9ef;
+    overflow: hidden;
+}
+
 
 span {
 	position: absolute;
@@ -70,4 +102,33 @@ a:link {
 
 a:visited {
 	color: #444444;
+}
+
+/* animation starts here */
+
+table {
+	table-layout: fixed;
+}
+
+td {
+	border: 1px solid #222222;
+	width: 10px;
+	height: 10px;
+	-webkit-transition: background-color 150ms linear;
+    -moz-transition: background-color 150ms linear;
+    -o-transition: background-color 150ms linear;
+    -ms-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
+}
+
+td.on {
+	background-color: #224466;
+}
+
+td.off {
+	background-color: #336699;
+}
+
+td.high {
+	background-color: #55AAFF;
 }
