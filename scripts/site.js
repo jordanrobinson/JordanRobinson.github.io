@@ -9,7 +9,6 @@ var addCells = function(boxWidth, boxId) {
 	var table = '';
 	for (var i = 0; i < docHeight / cellHeight; i++) {
 		table += '<tr class="' + i + '">';
-		console.log(i);
 		for (var j = 0; j < boxWidth / cellWidth; j++) {
 			tdId++;
 			if (Math.random()<.5) {
@@ -42,13 +41,23 @@ var setHigh = function() {
 	$('#' + id).addClass('high');
 }
 
-setInterval(function(){
+var transitions = function() {
 	setOff();
 	setHigh();
 	setOn();
-}, 1000);
+}
+
+for (var i = 0; i < 300; i++) {
+	window.setTimeout(transitions, (i * 1000));
+}
 
 $(document).ready(function() {
 	addCells(leftBoxWidth, '#left-box');
 	addCells(rightBoxWidth, '#right-box');
 });
+
+
+//todo:
+//mobile version
+//handle resizing
+//noscript version (images?)
