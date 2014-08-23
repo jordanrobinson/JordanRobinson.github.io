@@ -22,6 +22,9 @@ module.exports = function(grunt) {
 
     csslint: {
       strict: {
+        options: {
+          ids: false
+        },
         src: ['*.css']
       }
     },
