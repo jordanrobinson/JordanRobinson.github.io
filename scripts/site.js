@@ -11,7 +11,7 @@ var addCells = function(boxWidth, boxId) {
 		table += '<tr class="' + i + '">';
 		for (var j = 0; j < boxWidth / cellWidth; j++) {
 			tdId++;
-			if (Math.random()<.5) {
+			if (Math.random() < 0.5) {
 				table += '<td id="' + tdId + '" class="on"></td>';
 			}
 			else {
@@ -21,31 +21,31 @@ var addCells = function(boxWidth, boxId) {
 		table += '</tr>';
 	}
 	$(boxId).append(table);
-}
+};
 
 var setOff = function() {
 	var id = Math.floor(Math.random() * tdId) + 1;
 	$('#' + id).removeClass('on off high');
 	$('#' + id).addClass('on');
-}
+};
 
 var setOn = function() {
 	var id = Math.floor(Math.random() * tdId) + 1;
 	$('#' + id).removeClass('on off high');
 	$('#' + id).addClass('off');
-}
+};
 
 var setHigh = function() {
 	var id = Math.floor(Math.random() * tdId) + 1;
 	$('#' + id).removeClass('on off high');
 	$('#' + id).addClass('high');
-}
+};
 
 var transitions = function() {
 	setOff();
 	setHigh();
 	setOn();
-}
+};
 
 for (var i = 0; i < 300; i++) {
 	window.setTimeout(transitions, (i * 1000));
