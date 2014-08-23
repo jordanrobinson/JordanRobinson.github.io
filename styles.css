@@ -34,7 +34,6 @@ body {
 
 #page {
 	display: inline-block;
-	position: relative;
     color: #dfdfdf;
     font-family: Verdana;
     font-size: 13pt;
@@ -44,6 +43,7 @@ body {
     padding-left: 0;
     padding-right: 0;
     width: 62%;
+    position: absolute;
 }
 
 #left-box {
