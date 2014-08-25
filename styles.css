@@ -94,6 +94,10 @@ span {
 	background-image: url('assets/images/mail.png');
 }
 
+#android {
+	background-image: url('assets/images/android.png');
+}
+
 :link {
 	color: #DFDFDF;
 	text-shadow: 0 1px 3px #000000;
