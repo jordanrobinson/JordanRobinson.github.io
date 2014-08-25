@@ -1,4 +1,5 @@
 var docHeight = $(document).height();
+var docWidth = $(document).width();
 var rightBoxWidth = $('#right-box').width();
 var leftBoxWidth = $('#left-box').width();
 var cellHeight = 12;
@@ -14,8 +15,11 @@ var addCells = function(boxWidth, boxId) {
 			if (Math.random() < 0.5) {
 				table += '<td id="' + tdId + '" class="on"></td>';
 			}
-			else {
+			else if (Math.random() < 0.99) {
 				table += '<td id="' + tdId + '" class="off"></td>';
+			}
+			else {
+				table += '<td id="' + tdId + '" class="high"></td>';
 			}
 		}
 		table += '</tr>';
@@ -51,9 +55,48 @@ for (var i = 0; i < 300; i++) {
 	window.setTimeout(transitions, (i * 1000));
 }
 
+$(function() {
+	$('#mail').mouseenter(function() {
+		$('.high').addClass('mail-high');		
+	});
+	$('#mail').mouseleave(function() {
+		$('.mail-high').removeClass('mail-high');
+	});
+
+	$('#github').mouseenter(function() {
+		$('.high').addClass('github-high');		
+	});
+	$('#github').mouseleave(function() {
+		$('.github-high').removeClass('github-high');
+	});
+	
+	$('#stack').mouseenter(function() {
+		$('.high').addClass('stack-high');		
+	});
+	$('#stack').mouseleave(function() {
+		$('.stack-high').removeClass('stack-high');
+	});
+	
+	$('#android').mouseenter(function() {
+		$('.high').addClass('android-high');		
+	});
+	$('#android').mouseleave(function() {
+		$('.android-high').removeClass('android-high');
+	});
+
+	$('#linkedin').mouseenter(function() {
+		$('.high').addClass('linkedin-high');		
+	});
+	$('#linkedin').mouseleave(function() {
+		$('.linkedin-high').removeClass('linkedin-high');
+	});
+});
+
 $(document).ready(function() {
-	addCells(leftBoxWidth, '#left-box');
-	addCells(rightBoxWidth, '#right-box');
+	if (docWidth > 1000) {
+		addCells(leftBoxWidth, '#left-box');
+		addCells(rightBoxWidth, '#right-box');
+	}
 });
 
 

@@ -23,7 +23,8 @@ module.exports = function(grunt) {
     csslint: {
       strict: {
         options: {
-          ids: false
+          "ids": false,
+          "box-model": false
         },
         src: ['*.css']
       }
@@ -42,10 +43,8 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      jshint: {
-        files: ['<%= jshint.all %>'],
-        tasks: ['jshint:lint']
-      }
+        files: ['src/scripts/*.js'],
+        tasks: ['jshint', 'uglify']
     }
   });
 
@@ -58,5 +57,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['htmllint', 'jshint', 'csslint', 'uglify']);
+  grunt.registerTask('default', ['htmllint', 'jshint', 'csslint', 'uglify', 'watch']);
 };

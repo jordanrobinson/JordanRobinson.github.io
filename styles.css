@@ -54,7 +54,7 @@ body {
 	margin: 0;
 	padding: 0;
     border-right: 2px solid #66d9ef;
-    overflow: hidden;
+    
 }
 
 #right-box {
@@ -65,7 +65,6 @@ body {
 	margin: 0;
 	padding: 0;
     border-left: 2px solid #66d9ef;
-    overflow: hidden;
 }
 
 
@@ -135,4 +134,24 @@ td {
 
 .high {
 	background-color: #55AAFF;
+}
+
+.mail-high {
+	background-color: #DD3333;
+}
+
+.android-high {
+	background-color: #A4C639;
+}
+
+.stack-high {
+	background-color: #FFAA55;
+}
+
+.github-high {
+	background-color: #DDDDDD;
+}
+
+.linkedin-high {
+	background-color: #333333;
 }
