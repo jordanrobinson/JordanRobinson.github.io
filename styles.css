@@ -79,19 +79,19 @@ span {
 }
 
 #github {
-	background-image: url('images/github.png');
+	background-image: url('assets/images/github.png');
 }
 
 #stack {
-	background-image: url('images/stack.png');
+	background-image: url('assets/images/stack.png');
 }
 
 #linkedin {
-	background-image: url('images/linkedin.png');
+	background-image: url('assets/images/linkedin.png');
 }
 
 #mail {
-	background-image: url('images/mail.png');
+	background-image: url('assets/images/mail.png');
 }
 
 :link {
