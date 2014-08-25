@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     },
 
     htmllint: {
-      all: ['*.html']
+      all: ['index.html']
     },
 
     csslint: {
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
           "ids": false,
           "box-model": false
         },
-        src: ['*.css']
+        src: ['assets/styles/*.css']
       }
     },
     

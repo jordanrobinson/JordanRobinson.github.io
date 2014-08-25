@@ -56,38 +56,38 @@ for (var i = 0; i < 300; i++) {
 }
 
 $(function() {
-	$('#mail').mouseenter(function() {
+	$('#mail-span').mouseenter(function() {
 		$('.high').addClass('mail-high');		
 	});
-	$('#mail').mouseleave(function() {
+	$('#mail-span').mouseleave(function() {
 		$('.mail-high').removeClass('mail-high');
 	});
 
-	$('#github').mouseenter(function() {
+	$('#github-span').mouseenter(function() {
 		$('.high').addClass('github-high');		
 	});
-	$('#github').mouseleave(function() {
+	$('#github-span').mouseleave(function() {
 		$('.github-high').removeClass('github-high');
 	});
 	
-	$('#stack').mouseenter(function() {
+	$('#stack-span').mouseenter(function() {
 		$('.high').addClass('stack-high');		
 	});
-	$('#stack').mouseleave(function() {
+	$('#stack-span').mouseleave(function() {
 		$('.stack-high').removeClass('stack-high');
 	});
 	
-	$('#android').mouseenter(function() {
+	$('#android-span').mouseenter(function() {
 		$('.high').addClass('android-high');		
 	});
-	$('#android').mouseleave(function() {
+	$('#android-span').mouseleave(function() {
 		$('.android-high').removeClass('android-high');
 	});
 
-	$('#linkedin').mouseenter(function() {
+	$('#linkedin-span').mouseenter(function() {
 		$('.high').addClass('linkedin-high');		
 	});
-	$('#linkedin').mouseleave(function() {
+	$('#linkedin-span').mouseleave(function() {
 		$('.linkedin-high').removeClass('linkedin-high');
 	});
 });
