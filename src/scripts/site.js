@@ -53,7 +53,7 @@ var transitions = function() {
 };
 
 for (var i = 0; i < 300; i++) {
-	window.setTimeout(transitions, (i * 1000));
+	window.setTimeout(transitions, (i * 500));
 }
 
 $(function() {
@@ -107,3 +107,4 @@ $(document).ready(function() {
 //handle resizing
 //noscript version (images?)
 //replace out images with font icons
+//make a game of life version
