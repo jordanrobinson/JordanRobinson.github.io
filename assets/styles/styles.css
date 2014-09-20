@@ -108,12 +108,7 @@ span {
 
 /* animation starts here */
 
-table {
-	table-layout: fixed;
-}
-
 td {
-	border: 1px solid #222222;
 	width: 10px;
 	height: 10px;
 	padding: 0;

@@ -7,42 +7,43 @@ var cellWidth = 12;
 var tdId = 0;
 
 var addCells = function(boxWidth, boxId) {
-	var table = '';
+	var table = '<table>';
 	for (var i = 0; i < docHeight / cellHeight; i++) {
-		table += '<tr class="' + i + '">';
+		table += '<tr class="' + 'row-' + i + '">';
 		for (var j = 0; j < boxWidth / cellWidth; j++) {
 			tdId++;
 			if (Math.random() < 0.5) {
-				table += '<td id="' + tdId + '" class="on"></td>';
+				table += '<td id="cell-' + tdId + '" class="on"></td>';
 			}
 			else if (Math.random() < 0.99) {
-				table += '<td id="' + tdId + '" class="off"></td>';
+				table += '<td id="cell-' + tdId + '" class="off"></td>';
 			}
 			else {
-				table += '<td id="' + tdId + '" class="high"></td>';
+				table += '<td id="cell-' + tdId + '" class="high"></td>';
 			}
 		}
 		table += '</tr>';
 	}
+	table += '</table>';
 	$(boxId).append(table);
 };
 
 var setOff = function() {
 	var id = Math.floor(Math.random() * tdId) + 1;
-	$('#' + id).removeClass('on off high');
-	$('#' + id).addClass('on');
+	$('#cell-' + id).removeClass('on off high');
+	$('#cell-' + id).addClass('on');
 };
 
 var setOn = function() {
 	var id = Math.floor(Math.random() * tdId) + 1;
-	$('#' + id).removeClass('on off high');
-	$('#' + id).addClass('off');
+	$('#cell-' + id).removeClass('on off high');
+	$('#cell-' + id).addClass('off');
 };
 
 var setHigh = function() {
 	var id = Math.floor(Math.random() * tdId) + 1;
-	$('#' + id).removeClass('on off high');
-	$('#' + id).addClass('high');
+	$('#cell-' + id).removeClass('on off high');
+	$('#cell-' + id).addClass('high');
 };
 
 var transitions = function() {
@@ -97,10 +98,12 @@ $(document).ready(function() {
 		addCells(leftBoxWidth, '#left-box');
 		addCells(rightBoxWidth, '#right-box');
 	}
+	console.log('%cNo bugs here! :D ', 
+		'-webkit-background-clip: text; color:white; -webkit-text-fill-color: transparent; -webkit-gradient(linear, left top, right top, from(#ea8711), to(#d96363)); background-image: -webkit-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79); background-image: -moz-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79); font: 90px sans-serif; letter-spacing:2px;');
 });
-
 
 //todo:
 //mobile version
 //handle resizing
 //noscript version (images?)
+//replace out images with font icons
