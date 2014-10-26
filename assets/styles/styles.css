@@ -32,20 +32,6 @@ body {
 	padding-bottom: 40px;
 }
 
-#page {
-	display: inline-block;
-	color: #dfdfdf;
-	font-family: Verdana;
-	font-size: 13pt;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 0;
-	padding-right: 0;
-	width: 62%;
-	position: absolute;
-}
-
 span {
 	position: absolute;
 	width: 60%;
@@ -84,7 +70,46 @@ span {
 	color: #444444;
 }
 
+
+@media (max-width: 499px) {
+	#left-box {
+		display:none;
+	}
+	#right-box {
+		display:none;
+	}
+
+	#page {
+		display: inline-block;
+		color: #dfdfdf;
+		font-family: Verdana;
+		font-size: 13pt;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		position: absolute;
+	}
+}
+
+
 @media (min-width: 500px) {
+
+	#page {
+		display: inline-block;
+		color: #dfdfdf;
+		font-family: Verdana;
+		font-size: 13pt;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+		width: 62%;
+		position: absolute;
+	}
 
 	#left-box {
 		float: left;
