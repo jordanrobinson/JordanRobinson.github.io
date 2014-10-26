@@ -94,10 +94,8 @@ $(function() {
 });
 
 $(document).ready(function() {
-	if (docWidth > 1000) {
-		addCells(leftBoxWidth, '#left-box');
-		addCells(rightBoxWidth, '#right-box');
-	}
+	addCells(leftBoxWidth, '#left-box');
+	addCells(rightBoxWidth, '#right-box');
 	console.log('%cNo bugs here! :D ', 
 		'-webkit-background-clip: text; color:white; -webkit-text-fill-color: transparent; -webkit-gradient(linear, left top, right top, from(#ea8711), to(#d96363)); background-image: -webkit-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79); background-image: -moz-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79); font: 90px sans-serif; letter-spacing:2px;');
 });

@@ -34,39 +34,17 @@ body {
 
 #page {
 	display: inline-block;
-    color: #dfdfdf;
-    font-family: Verdana;
-    font-size: 13pt;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-    width: 62%;
-    position: absolute;
-}
-
-#left-box {
-	float: left;
-	width: 19%;
+	color: #dfdfdf;
+	font-family: Verdana;
+	font-size: 13pt;
 	height: 100%;
-	border: 0;
-	margin: 0;
-	padding: 0;
-    border-right: 2px solid #66d9ef;
-    
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+	padding-right: 0;
+	width: 62%;
+	position: absolute;
 }
-
-#right-box {
-	float: right;
-	width: 19%;
-	height: 100%;
-	border: 0;
-	margin: 0;
-	padding: 0;
-    border-left: 2px solid #66d9ef;
-}
-
 
 span {
 	position: absolute;
@@ -106,47 +84,71 @@ span {
 	color: #444444;
 }
 
-/* animation starts here */
+@media (min-width: 500px) {
 
-td {
-	width: 10px;
-	height: 10px;
-	padding: 0;
-	-webkit-transition: background-color 150ms linear;
-    -moz-transition: background-color 150ms linear;
-    -o-transition: background-color 150ms linear;
-    -ms-transition: background-color 150ms linear;
-    transition: background-color 150ms linear;
-}
+	#left-box {
+		float: left;
+		width: 19%;
+		height: 100%;
+		border: 0;
+		margin: 0;
+		padding: 0;
+		border-right: 2px solid #66d9ef;
 
-.on {
-	background-color: #224466;
-}
+	}
 
-.off {
-	background-color: #336699;
-}
+	#right-box {
+		float: right;
+		width: 19%;
+		height: 100%;
+		border: 0;
+		margin: 0;
+		padding: 0;
+		border-left: 2px solid #66d9ef;
+	}
 
-.high {
-	background-color: #55AAFF;
-}
+	/* animation starts here */
 
-.mail-high {
-	background-color: #DD3333;
-}
+	td {
+		width: 10px;
+		height: 10px;
+		padding: 0;
+		-webkit-transition: background-color 150ms linear;
+		-moz-transition: background-color 150ms linear;
+		-o-transition: background-color 150ms linear;
+		-ms-transition: background-color 150ms linear;
+		transition: background-color 150ms linear;
+	}
 
-.android-high {
-	background-color: #A4C639;
-}
+	.on {
+		background-color: #224466;
+	}
 
-.stack-high {
-	background-color: #FFAA55;
-}
+	.off {
+		background-color: #336699;
+	}
 
-.github-high {
-	background-color: #DDDDDD;
-}
+	.high {
+		background-color: #55AAFF;
+	}
 
-.linkedin-high {
-	background-color: #333333;
+	.mail-high {
+		background-color: #DD3333;
+	}
+
+	.android-high {
+		background-color: #A4C639;
+	}
+
+	.stack-high {
+		background-color: #FFAA55;
+	}
+
+	.github-high {
+		background-color: #DDDDDD;
+	}
+
+	.linkedin-high {
+		background-color: #333333;
+	}
 }
