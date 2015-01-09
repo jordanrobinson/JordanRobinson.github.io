@@ -61,6 +61,10 @@ span {
 	background-image: url('../images/android.png');
 }
 
+#blog {
+	background-image: url('../images/blog.png');
+}
+
 :link {
 	color: #DFDFDF;
 	text-shadow: 0 1px 3px #000000;
