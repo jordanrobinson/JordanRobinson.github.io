@@ -497,14 +497,17 @@
 
  @font-face {
  	font-family: 'icomoon';
- 	src:url('../fonts/icomoon.eot?sprjwq');
- 	src:url('../fonts/icomoon.eot?#iefixsprjwq') format('embedded-opentype'),
- 	url('../fonts/icomoon.ttf?sprjwq') format('truetype'),
- 	url('../fonts/icomoon.woff?sprjwq') format('woff'),
- 	url('../fonts/icomoon.svg?sprjwq#icomoon') format('svg');
+ 	src:url('../fonts/icomoon.woff?sprjwq') format('woff');
  	font-weight: normal;
  	font-style: normal;
  }
+
+ @font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cabin Regular'), local('Cabin-Regular'), url('../fonts/cabin.woff') format('woff');
+}
 
  [class^="icon-"], [class*=" icon-"] {
  	font-family: 'icomoon';
@@ -566,6 +569,7 @@
 
  .right-sidebar {
  	text-align: center;
+ 	padding: 10px;
  }
 
  .about-text {
