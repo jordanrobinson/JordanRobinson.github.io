@@ -1,6 +1,1 @@
-{
-  "statistics": [
-    "thing",
-    "other thing"
-  ]
-}
+{"statistics":["The project size is 65M\t.\n","The whole website can be found on Github, and is open source","For HTTPS, I'm using cloudflare","Hosting is taken care of by Github pages, with a custom CNAME","The link images were generated using Icomoon, a lovely tool for fonts","These stats are automatically generated at build time, using grunt for CI","The font used on this site is Cabin, one of the Google fonts","This site doesn't use any javascript libraries, and is just plain JS (though there are some node libraries for the grunt build)"]}
