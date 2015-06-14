@@ -559,22 +559,13 @@
  	padding: 1rem;
  	text-align: center;
  	font-size: 24pt;
- 	background: rgba(0, 0, 0, 0.7) none no-repeat scroll 0% 0%;
+ 	background: rgba(0, 0, 0, 0.7) none no-repeat scroll 0 0;
  	animation: fadein 3s;
  	color: #F2F2F2;
  }
 
- .sidebar {
- }
-
- .left-sidebar {
- }
-
  .right-sidebar {
  	text-align: center;
- }
-
- .main-content {
  }
 
  .about-text {

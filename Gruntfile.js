@@ -48,5 +48,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['jshint', 'csslint', 'uglify', 'watch']);
+
+  grunt.registerTask('updatejson', function () {
+        var projectFile = "json/statistics.json";
+
+        if (!grunt.file.exists(projectFile)) {
+            grunt.log.error("file " + projectFile + " not found");
+            return true;//return false to abort the execution
+        }
+        var project = grunt.file.readJSON(projectFile);//get file as json object
+
+        project['statistics'] = ['thing', 'other thing'];//edit the value of json object, you can also use projec.key if you know what you are updating
+
+        grunt.file.write(projectFile, JSON.stringify(project, null, 2));//serialize it back to file
+
+    });
+  grunt.registerTask('default', ['jshint', 'csslint', 'uglify', 'updatejson']);
 };
