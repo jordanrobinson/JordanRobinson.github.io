@@ -550,7 +550,7 @@
  .banner {
  	padding-top: 6rem;
  	padding-bottom: 2rem;
- 	background-image: url("../../images/test.jpg");
+ 	background-image: url("../images/banner.jpg");
  	background-size: cover;
  	border-bottom: solid 4px #66D9EF;
  }
