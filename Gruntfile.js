@@ -6,9 +6,6 @@
  */
 
  'use strict';
-
-
-
  module.exports = function(grunt) {
 
   // Project configuration.
@@ -19,12 +16,12 @@
          command: 'sh scripts/publish/size.sh',
          options: {
            callback: size
-         },
+         }
+       },
         publish: {
           command: 'sh scripts/publish/publish.sh'
         }
-      }
-    },
+      },
 
     copy: {
       main: {
@@ -65,21 +62,12 @@
           }
         },
 
-        clean: {
-          example: ['<%= site.destination %>/*.html']
-        },
-
         uglify: {
           target: {
             files: {
               'output/scripts/site.min.js': ['scripts/site.js']
             }
           }
-        },
-
-        watch: {
-          files: ['src/scripts/*.js'],
-          tasks: ['jshint', 'uglify']
         }
       });
 
@@ -96,7 +84,8 @@
   grunt.loadNpmTasks('grunt-git');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'shell:size', 'shell:publish']);
+  grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'shell:size']);
+  grunt.registerTask('publish', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'shell:size', 'shell:publish']);
 };
 
 // utility functions
