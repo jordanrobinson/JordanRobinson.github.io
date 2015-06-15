@@ -15,12 +15,15 @@
   grunt.initConfig({
 
     shell: {
-      size: {
-        command: 'sh scripts/publish/size.sh',
-        options: {
-          callback: size
+      //size: {
+        // command: 'sh scripts/publish/size.sh',
+        // options: {
+        //   callback: size
+        // },
+        publish: {
+          command: 'sh scripts/publish/publish.sh'
         }
-      }
+      //}
     },
 
     copy: {
@@ -90,9 +93,11 @@
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-sitemap');
+  grunt.loadNpmTasks('grunt-git');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'sitemap', 'shell']);
+  grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'shell']);
+  grunt.registerTask('publish', ['git']);
 };
 
 function addStat(value) {
