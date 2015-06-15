@@ -1,1 +1,1 @@
-git subtree push --prefix output origin master -f
+git subtree push --prefix output origin master
