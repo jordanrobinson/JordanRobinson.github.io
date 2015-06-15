@@ -20,9 +20,9 @@
          options: {
            callback: size
          },
-        publish: {
-          command: 'sh scripts/publish/publish.sh'
-        }
+      },
+      publish: {
+        command: 'sh scripts/publish/publish.sh'
       }
     },
 
