@@ -15,15 +15,15 @@
   grunt.initConfig({
 
     shell: {
-      //size: {
-        // command: 'sh scripts/publish/size.sh',
-        // options: {
-        //   callback: size
-        // },
+      size: {
+         command: 'sh scripts/publish/size.sh',
+         options: {
+           callback: size
+         },
         publish: {
           command: 'sh scripts/publish/publish.sh'
         }
-      //}
+      }
     },
 
     copy: {
@@ -50,7 +50,7 @@
 
     sitemap: {
       dist: {
-            pattern: ['**/*.html', '!**/google*.html'], // this will exclude 'google*.html' 
+            pattern: ['**/*.html', '!**/google*.html'],
             siteRoot: 'output/'
           }
         },
@@ -96,9 +96,10 @@
   grunt.loadNpmTasks('grunt-git');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'shell']);
-  grunt.registerTask('publish', ['git']);
+  grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'shell:size', 'shell:publish']);
 };
+
+// utility functions
 
 function addStat(value) {
   var fs = require('fs');
