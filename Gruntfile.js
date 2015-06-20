@@ -34,6 +34,17 @@
       },
     },
 
+  concat: {
+    options: {
+      separator: ';',
+    },
+    dist: {
+      src: ['scripts/ga.js', 'scripts/site.js'],
+      dest: 'output/scripts/site.min.js',
+    },
+  },
+
+
     cssmin: {
       target: {
         files: [{
@@ -53,7 +64,7 @@
         },
 
         jshint: {
-          all: ['scripts/*.js']
+          all: ['scripts/site.js']
         },
 
         csslint: {
@@ -65,13 +76,14 @@
         uglify: {
           target: {
             files: {
-              'output/scripts/site.min.js': ['scripts/site.js']
+              'output/scripts/site.min.js': ['output/scripts/site.min.js']
             }
           }
         }
       });
 
   // Load npm plugins to provide necessary tasks.
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-csslint');
@@ -84,8 +96,8 @@
   grunt.loadNpmTasks('grunt-git');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'shell:size']);
-  grunt.registerTask('publish', ['jshint', 'csslint', 'cssmin', 'uglify', 'copy', 'shell:size', 'shell:publish']);
+  grunt.registerTask('default', ['jshint', 'cssmin', 'concat', 'uglify', 'copy', 'shell:size']);
+  grunt.registerTask('publish', ['jshint', 'cssmin', 'concat', 'uglify', 'copy', 'shell:size', 'shell:publish']);
 };
 
 // utility functions

@@ -481,13 +481,14 @@
 
  body {
  	background-color: #F2F2F2;
- 	font-family: 'Cabin', serif;
+ 	font-family: 'Cabin', sans-serif;
  }
 
  .banner {
  	padding-top: 6rem;
  	padding-bottom: 2rem;
  	background-image: url("../images/banner.jpg");
+ 	background-color: #020202;
  	background-size: cover;
  	border-bottom: solid 4px #66D9EF;
  }
@@ -636,6 +637,7 @@
 
  	.banner {
  		background-image: url("../images/banner.jpg");
+ 		background-color: #020202;
  		background-size: cover;
  		border-bottom: solid 4px #66D9EF;
  		height: 80vh;

@@ -1,13 +1,3 @@
-
-//GA
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-54149799-1', 'auto');
-ga('send', 'pageview');
-
 //Animations
 
 var fadeIn = function(element, timeout) {
@@ -21,7 +11,6 @@ var fetchJSONFile = function(path, callback) {
 	httpRequest.onreadystatechange = function() {
 		if (httpRequest.readyState === 4) {
 			if (httpRequest.status === 200 || httpRequest.status === 0) {
-				console.log(httpRequest.responseText);
 				var data = JSON.parse(httpRequest.responseText);
 				if (callback) {
 					callback(data);
@@ -45,8 +34,8 @@ document.onreadystatechange = function () {
 			timeout += 500;
 		}
 
-		for (var i = 0; i < textElements.length; i++) {
-			fadeIn(textElements[i], timeout);
+		for (var j = 0; j < textElements.length; j++) {
+			fadeIn(textElements[j], timeout);
 			timeout += 200;
 		}
 
@@ -54,13 +43,13 @@ document.onreadystatechange = function () {
 
 		fetchJSONFile('json/statistics.json', function(data){
 
-			for (var i = 0; i < data.statistics.length; i++) {
+			for (var k = 0; k < data.statistics.length; k++) {
 				var rightSidebar = document.getElementsByClassName('right-sidebar');
-				for (var j = 0; j < rightSidebar.length; j++) {
+				for (var l = 0; l < rightSidebar.length; l++) {
 					var newStat = document.createElement('p');
-					newStat.appendChild(document.createTextNode(data.statistics[i]));
+					newStat.appendChild(document.createTextNode(data.statistics[k]));
 					newStat.className = newStat.className + "fadein-text";
-					rightSidebar[j].appendChild(newStat);
+					rightSidebar[l].appendChild(newStat);
 
 					fadeIn(newStat, timeout);
 					timeout += 2000;
