@@ -39,7 +39,7 @@
       separator: ';',
     },
     dist: {
-      src: ['scripts/ga.js', 'scripts/site.js'],
+      src: ['scripts/cheet.js', 'scripts/ga.js', 'scripts/site.js'],
       dest: 'output/scripts/site.min.js',
     },
   },
