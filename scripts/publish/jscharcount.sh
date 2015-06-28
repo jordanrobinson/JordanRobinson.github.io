@@ -1,0 +1,1 @@
+find scripts -name '*.js' | xargs wc -l

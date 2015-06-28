@@ -13,26 +13,38 @@
 
     shell: {
       size: {
-         command: 'sh scripts/publish/size.sh',
-         options: {
-           callback: size
-         }
-       },
-        publish: {
-          command: 'sh scripts/publish/publish.sh'
-        }
-      },
+       command: 'sh scripts/publish/size.sh',
+       options: {
+         callback: size
+       }
+     },
+     cssCharCount: {
+       command: 'sh scripts/publish/cssCharCount.sh',
+       options: {
+         callback: cssCharCount
+       }
+     },
+     jsCharCount: {
+       command: 'sh scripts/publish/jsCharCount.sh | grep total',
+       options: {
+         callback: jsCharCount
+       }
+     },
+     publish: {
+      command: 'sh scripts/publish/publish.sh'
+    }
+  },
 
-    copy: {
-      main: {
-        files: [
-        {expand: true, cwd: 'root/', src: '*', dest: 'output/', filter: 'isFile'},
-        {expand: true, src: ['images/**'], dest: 'output/'},
-        {expand: true, src: ['json/**'], dest: 'output/'},
-        {expand: true, src: ['fonts/**'], dest: 'output/'}
-        ],
-      },
+  copy: {
+    main: {
+      files: [
+      {expand: true, cwd: 'root/', src: '*', dest: 'output/', filter: 'isFile'},
+      {expand: true, src: ['images/**'], dest: 'output/'},
+      {expand: true, src: ['json/**'], dest: 'output/'},
+      {expand: true, src: ['fonts/**'], dest: 'output/'}
+      ],
     },
+  },
 
   concat: {
     options: {
@@ -45,42 +57,42 @@
   },
 
 
-    cssmin: {
-      target: {
-        files: [{
-          expand: true,
-          src: ['styles/styles.css', '!*.min.css'],
-          dest: 'output/',
-          ext: '.min.css'
-        }]
+  cssmin: {
+    target: {
+      files: [{
+        expand: true,
+        src: ['styles/styles.css', '!*.min.css'],
+        dest: 'output/',
+        ext: '.min.css'
+      }]
+    }
+  },
+
+  sitemap: {
+    dist: {
+      pattern: ['**/*.html', '!**/google*.html'],
+      siteRoot: 'output/'
+    }
+  },
+
+  jshint: {
+    all: ['scripts/site.js']
+  },
+
+  csslint: {
+    strict: {
+      src: ['styles/*.css']
+    }
+  },
+
+  uglify: {
+    target: {
+      files: {
+        'output/scripts/site.min.js': ['output/scripts/site.min.js']
       }
-    },
-
-    sitemap: {
-      dist: {
-            pattern: ['**/*.html', '!**/google*.html'],
-            siteRoot: 'output/'
-          }
-        },
-
-        jshint: {
-          all: ['scripts/site.js']
-        },
-
-        csslint: {
-          strict: {
-            src: ['styles/*.css']
-          }
-        },
-
-        uglify: {
-          target: {
-            files: {
-              'output/scripts/site.min.js': ['output/scripts/site.min.js']
-            }
-          }
-        }
-      });
+    }
+  }
+});
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -96,8 +108,8 @@
   grunt.loadNpmTasks('grunt-git');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['jshint', 'cssmin', 'concat', 'uglify', 'copy', 'shell:size']);
-  grunt.registerTask('publish', ['jshint', 'cssmin', 'concat', 'uglify', 'copy', 'shell:size', 'shell:publish']);
+  grunt.registerTask('default', ['jshint', 'cssmin', 'concat', 'uglify', 'shell:size', 'shell:cssCharCount', 'shell:jsCharCount', 'copy']);
+  grunt.registerTask('publish', ['default', 'shell:publish']);
 };
 
 // utility functions
@@ -121,17 +133,24 @@ function clearStats() {
 }
 
 function size(err, stdout, stderr, cb) {
-  var size = 'Is currently ' + stdout;
+  var size = 'Is currently ' + stdout.replace(' ', '').replace('\n', '') + 'B';
   clearStats();
-  addIntroStat();
   addStat(size);
   addTextStats();
-  console.log(size);
   cb();
 }
 
-function addIntroStat() {
-  addStat('This site...');  
+function cssCharCount(err, stdout, stderr, cb) {
+  var charCount = 'Has ' + stdout.replace('styles', '').replace('styles.css', '').replace('\n', '').replace(' \/', '') + ' lines of CSS (before minification)';
+  addStat(charCount);
+  cb(); 
+}
+
+function jsCharCount(err, stdout, stderr, cb) {
+  var charCount = 'Has ' + stdout.replace(/\n/g, '').replace(/\//g, '').replace(/\W/g, '').replace(/total/g, '') + ' lines of JS (before minification)';
+  console.log(charCount);
+  addStat(charCount);
+  cb(); 
 }
 
 function addTextStats() {
@@ -142,4 +161,5 @@ function addTextStats() {
   addStat('These stats are automatically generated at build time, using grunt for CI');
   addStat('The font used is Cabin, one of the Google fonts');
   addStat('It doesn\'t use any javascript libraries, just plain JS');
+  addStat('Is fully Konami code compliant');
 }

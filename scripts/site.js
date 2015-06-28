@@ -22,6 +22,25 @@ var fetchJSONFile = function(path, callback) {
 	httpRequest.send(); 
 };
 
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
+function addStat(stat, element, timeout) {
+	var newStat = document.createElement('p');
+	newStat.appendChild(document.createTextNode(stat));
+	newStat.className = newStat.className + "fadein-text";
+	element.appendChild(newStat);
+
+	fadeIn(newStat, timeout);
+}
+
 document.onreadystatechange = function () {
 	if (document.readyState == 'complete') {
 
@@ -43,24 +62,30 @@ document.onreadystatechange = function () {
 
 		fetchJSONFile('json/statistics.json', function(data){
 
-			for (var k = 0; k < data.statistics.length; k++) {
+			statistics = shuffleArray(data.statistics);
+
+			for (var k = 0; k < 7; k++) {
 				var rightSidebar = document.getElementsByClassName('right-sidebar');
 				for (var l = 0; l < rightSidebar.length; l++) {
-					var newStat = document.createElement('p');
-					newStat.appendChild(document.createTextNode(data.statistics[k]));
-					newStat.className = newStat.className + "fadein-text";
-					rightSidebar[l].appendChild(newStat);
-
-					fadeIn(newStat, timeout);
+					if (k === 0) {
+						addStat("Site statistics...", rightSidebar[l], timeout);
+					}
+					else if (k === 6) {
+						addStat('There are currently 12 of these statistics, randomly shown', rightSidebar[l], timeout);
+					}
+					else {
+						addStat(statistics[k], rightSidebar[l], timeout);						
+					}
 					timeout += 2000;
 				}
 			}
+
 		});
 
 		cheet('up up down down left right left right b a', function() {
 			var konami = document.getElementsByClassName('heading');
 			for (var i = 0; i < konami.length; i++) {
-				konami[0].className = konami[0].className + " konami font-effect-fire-animation";
+				konami[0].className = konami[0].className + " konami";
 			}
 		});
 
