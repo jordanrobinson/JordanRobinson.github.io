@@ -85,6 +85,16 @@
     }
   },
 
+  watch: {
+    scripts: {
+      files: ['**/*.*'],
+      tasks: ['jshint', 'cssmin', 'concat', 'uglify', 'copy'],
+      options: {
+        spawn: false,
+      },
+    },
+  },
+
   uglify: {
     target: {
       files: {
@@ -110,6 +120,7 @@
   // Default to tasks to run with the "grunt" command.
   grunt.registerTask('default', ['jshint', 'cssmin', 'concat', 'uglify', 'shell:size', 'shell:cssCharCount', 'shell:jsCharCount', 'copy']);
   grunt.registerTask('publish', ['default', 'shell:publish']);
+  grunt.registerTask('develop', ['jshint', 'cssmin', 'concat', 'uglify', 'copy', 'watch']);
 };
 
 // utility functions

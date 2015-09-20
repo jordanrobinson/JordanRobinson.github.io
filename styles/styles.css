@@ -480,9 +480,40 @@
  /* custom styles */
 
  body {
- 	background-color: #F2F2F2;
- 	font-family: 'Cabin', sans-serif;
  }
+
+ .content {
+  background-color: #378EB0;
+  height: 100vh;
+  color: #f2f2f2;
+  padding: 5rem;
+ }
+
+ .aside {
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-color: #020202;
+ }
+
+ .head {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  color: #40BDED;
+  padding-bottom: 2rem;
+ }
+
+ .title {
+  font-family: "Old Standard TT", serif;
+  font-style: italic;
+  font-size: 36pt;
+ }
+
+ .main {
+  font-family: "Old Standard TT", serif;
+ }
+
+
+ /* old stuff starts here */
 
  .banner {
  	padding-top: 6rem;
