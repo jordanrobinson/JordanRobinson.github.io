@@ -496,6 +496,7 @@
   background-size: cover;
   background-color: #020202;
   height: 100vh;
+  position: fixed;
  }
 
  .head {
