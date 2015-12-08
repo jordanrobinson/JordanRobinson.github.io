@@ -12,6 +12,31 @@
  	-webkit-text-size-adjust: 100%; /* 2 */
  }
 
+ html, body, div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+title, head {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 /**
  * Remove default margin.
  */
@@ -130,15 +155,6 @@
  	font-style: italic;
  }
 
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-
- h1 {
- 	font-size: 2em;
- 	margin: 0.67em 0;
- }
 
 /**
  * Address styling not present in IE 8/9.
@@ -503,12 +519,13 @@
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
   color: #f2f2f2;
+  font-size: 9pt;
  }
 
  .title {
   font-family: "Old Standard TT", serif;
   font-style: italic;
-  font-size: 36pt;
+  font-size: 22pt;
   color: #111111;
  }
 
@@ -532,7 +549,7 @@
   color: #f2f2f2;
   display: block;
   text-align: right;
-  padding-right:3rem;
+  padding-left:2rem;
   padding-bottom:3rem;
   font-size: 40px;
 }
@@ -632,11 +649,11 @@
  @media (min-width: 320px) and (max-width: 768px) {
 
   .col-7 {
-    width: 70%;
+    width: 80%;
   }
 
   .col-1 {
-    width: 30%;
+    width: 10%;
   }
 
  .icon {
