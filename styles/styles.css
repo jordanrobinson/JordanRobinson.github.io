@@ -20,8 +20,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -523,13 +523,20 @@ title, head {
 
  .title {
   font-family: "Old Standard TT", serif;
-  font-style: italic;
-  font-size: 22pt;
+  /*
+
+  ¯\_(ツ)_/¯
+
+  */
+  font-size: 24px;
   color: #111111;
  }
 
  .main {
   font-family: "Old Standard TT", serif;
+  font-size: larger;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
  }
 
  .inline-link {
@@ -643,7 +650,7 @@ title, head {
  	.col-12 {
  		width: 100%;
  	}
- 
+
 
  @media (min-width: 320px) and (max-width: 768px) {
 
@@ -676,10 +683,10 @@ title, head {
  /* Konami */
 
   .dark {
-    -webkit-animation: fadeOut 3s ease-in; 
-    -moz-animation: fadeOut 3s ease-in; 
-    -o-animation: fadeOut 3s ease-in; 
-    animation: fadeOut 3s ease-in; 
+    -webkit-animation: fadeOut 3s ease-in;
+    -moz-animation: fadeOut 3s ease-in;
+    -o-animation: fadeOut 3s ease-in;
+    animation: fadeOut 3s ease-in;
     background-color: #111111;
   }
 
@@ -739,7 +746,7 @@ title, head {
   -moz-animation-name:font-effect-fire-animation-keyframes;
   -moz-animation-iteration-count:infinite;
   -moz-animation-direction:alternate;
-  
+
   -webkit-animation-duration:0.8s;
   -webkit-animation-name:font-effect-fire-animation-keyframes;
   -webkit-animation-iteration-count:infinite;
