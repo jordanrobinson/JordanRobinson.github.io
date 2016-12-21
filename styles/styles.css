@@ -499,7 +499,7 @@ title, head {
  }
 
   .background {
-    background-color: #378EB0;
+    background-color: #384B69;
   }
 
  .content {
@@ -515,10 +515,10 @@ title, head {
  }
 
  .head {
-  font-family: "Lato", sans-serif;
-  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  text-transform: lowercase;
   color: #f2f2f2;
-  font-size: 9pt;
+  font-size: 14pt;
  }
 
  .title {
@@ -555,7 +555,7 @@ title, head {
 
  .links {
 
-  font-family: "Lato", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   color: #f2f2f2;
   padding-bottom: 3rem;
@@ -566,7 +566,7 @@ title, head {
 
  .icon-text {
   color: #f2f2f2;
-  font-family: "Lato", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size:16pt;
   display:none;
  }
@@ -661,7 +661,7 @@ title, head {
 
  .aside {
   display:none;
-  background-color: #378EB0;
+  background-color: #384B69;
   }
 
   .content {
@@ -684,19 +684,19 @@ title, head {
   }
 
   @-webkit-keyframes fadeOut {
-    0%   { background-color: #378eb0; }
+    0%   { background-color: #384B69; }
     100% { background-color: #111111; }
   }
   @-moz-keyframes fadeOut {
-    0%   { background-color: #378eb0; }
+    0%   { background-color: #384B69; }
     100% { background-color: #111111; }
   }
   @-o-keyframes fadeOut {
-    0%   { background-color: #378eb0; }
+    0%   { background-color: #384B69; }
     100% { background-color: #111111; }
   }
   @keyframes fadeOut {
-    0%   { background-color: #378eb0; }
+    0%   { background-color: #384B69; }
     100% { background-color: #111111; }
   }
 
