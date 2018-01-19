@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/jordanrobinson
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jordanrobinson.co.uk
+  * I am jordanrobinson (https://keybase.io/jordanrobinson) on keybase.
+  * I have a public key with fingerprint FFA0 76B5 E54B CA42 549C  16A9 7D29 AF96 DE3A 0BFA
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012028ca7dc890926027f8abeda680105e7a44127a9f733dcf89406af7f297ce50aa0a",
+      "fingerprint": "ffa076b5e54bca42549c16a97d29af96de3a0bfa",
+      "host": "keybase.io",
+      "key_id": "7d29af96de3a0bfa",
+      "kid": "01012be4b8190897dfadd44af0c96fb1b3e1300149bf5595fa458ad5cfdf6c9f3c300a",
+      "uid": "1ba11828f858990df14a784d7a82d719",
+      "username": "jordanrobinson"
+    },
+    "service": {
+      "hostname": "jordanrobinson.co.uk",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1516401663,
+  "expire_in": 157680000,
+  "prev": "3fdc3609dd2cb55c2e1d17bbb7366da80110ed5d60b185df42a4ffe2bafff227",
+  "seqno": 19,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMNwAnicbZJtUFVFHMYv78oVeZkpS6HRC5oYMWfP+7mFYzTJi0rKGAEJ1z1nd+Hw
+cs/13AtJ5mDJyAgVMSRpRYNvd0RMJoQa+SCSxaAgqWBjTTgoZhEh4ECSjdo5TH5z
+v+zs/p/nt8/+d78P8bME++yMbam/brfe9+nt8pZYsmX3ox02WUNlNvsOWyGem3AR
+wm6Po1BFNruNAjRFiwoUkCJKlETzFC0QEcoYQV6kAMVhAbIsoAUoEYFhkEJEiaV4
+SARCS4KCOQpCCtribER15mHdpatOj4ElBFICL3OYY2UFsjTHSgrgoSQgWoJE4hFm
+ICUT05ivuU2HEU6GbhyvasaesXDMxXuC/nFuI7mMWVkEEiUaXAIRYllIKEXiiQxk
+BgOGogAryYTjJI5AlhMh4hSCCK9IhFGMqokrmcMBGQIg0iIROVGSKEQACwWRRQIU
+aSQAyRS6se6ExdhQF2g6gk5dk1WnW3PadsbZjFqpqmCzveZ9nqiLV7T4kkKD5NI1
+j6ZoRYYi3+Nxue0mwVPmMi1vY9nxP8xh2JDRVcNRinW3apxkB4ZS8agmHXCAZynA
+80ycDW93qTp2qKaCE4yHM4Z5Di41kAxBCsNTEkK0InOcQmOAgCDLssDwPILGKwMK
+Iw7xlAxEDhGWhiwhmJYhIYSmBZt5vW1OzWBLRk6YZzDdap4Tekp0bNv5XdcWf4tP
+sCUwwNf8bpbg+WGPP2HxutBHmx1Rv+w5mTr4UlJ38uSpqrH0gWMT0T8UnmnIzv+q
+2pqyXu9OYzzjsfqNV+7NzCbnbVriNyQl/vo5vpXg+nRsUl97bGxCHPxm2pnBHLnp
+6n+teunNjyNjXuxcFhapT5ygq16vK21dP/RTtihN/vm197kafcWjeSta2zpHvd79
+sddje/oWu36+HNja+uFMZnpTQ9Po7sAorQZcfD7imVXD61bvSr9W1FVfhzPC6nI3
+Nr9xtMV/yPrH1bsh4Uxz7YPcng/eVV7Vq967OrzQs5IKuRw6Xl0hJG4PYx7K7cvu
+3N5aD+h7p3zOb5+PrGpg8YUzQd2ph62w88r4EOqdAh9duiPXtXvDV9bnZm2ttAQt
+unY6a2TeJ+JfD9e099UWtEeOdCeV/j6zeu+hvx3DTT0RJyp7/4mp3OwJPns6Jz7q
+XG5yzoHRp6W0LQ123y6w5+Ch6bDW1Kzw3xrfeWo8PLGyEk2VXfh36d2BXZ/lT2/0
+XXb+yqoUKeF+SuOtZ8vfnFIn9/mFbljC1Ez13zhxbvcG7mJETia7N8l3U8yPvdpb
+E8tbyo+fLCyHO0a49wui1jZ2zIY8WDRyy7coKqc8p+deRv/ZTGv44OHl2sxsm6N3
+ccVxsK2s4ovQo0EH027z1U57ZMCaKPXbL72x/h0LOha+kB0w3YwHoi8xCxr2R+9r
+O3Lg5bHa2b7xKnd2SMJ/jFvIhg==
+=nk/i
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jordanrobinson
+
+==================================================================
