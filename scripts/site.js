@@ -162,7 +162,7 @@ document.onreadystatechange = function () {
 			}
 		});
 
-		console.log('%cNo bugs here! :D ', 
-			'-webkit-background-clip: text; color:white; -webkit-text-fill-color: transparent; -webkit-gradient(linear, left top, right top, from(#ea8711), to(#d96363)); background-image: -webkit-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79); background-image: -moz-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79); font: 90px sans-serif; letter-spacing:2px;');
+    console.log('%cNo bugs here! :D ', 
+      '-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; font: 90px sans-serif; letter-spacing:2px; color: rgba(0, 0, 0, 0); text-align: center; -o-text-overflow: clip; text-overflow: clip; text-shadow: 3px 0 0 rgb(217,31,38), 6px 0 0 rgb(226,91,14), 9px 0 0 rgb(245,221,8), 12px 0 0 rgb(5,148,68), 15px 0 0 rgb(2,135,206), 18px 0 0 rgb(4,77,145), 21px 0 0 rgb(42,21,113); -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); -moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); -o-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);   transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);');
 	}
 };
