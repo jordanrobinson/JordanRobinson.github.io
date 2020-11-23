@@ -498,6 +498,9 @@ title, head {
 
  body {
  }
+  .egg {
+	  display:none;
+  }
 
   .background {
     background-color: #384B69;
@@ -672,6 +675,21 @@ title, head {
 
  }
 
+ @media (min-width: 0px) and (max-width: 320px) {
+  .content {
+	  display: none;
+	}
+  .links {
+	  display: none;
+	}
+  .aside {
+	  display: none;
+    }
+  .egg {
+	  display: block;
+    }
+   }
+
  /* JS classes */
 
  /* Konami */
@@ -701,25 +719,7 @@ title, head {
     100% { background-color: #111111; }
   }
 
-
- @-moz-keyframes font-effect-fire-animation-keyframes {
-  0% {
-    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
-  }
-  25% {
-    text-shadow: 0 -0.05em 0.2em #FFF, 0 -0.05em 0.17em #FE0, 0.04em -0.12em 0.22em #FC0, 0.04em -0.13em 0.27em #F90, 0.05em -0.23em 0.33em #F70, 0.07em -0.28em 0.47em #F70, 0.1em -0.3em 0.8em #F50, 0.1em -0.3em 0.9em #F40;
-  }
-  50% {    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
-  }
-  75% {
-    text-shadow: 0 -0.05em 0.2em #FFF, 0 -0.06em 0.18em #FE0, 0.05em -0.15em 0.23em #FC0, 0.05em -0.15em 0.3em #F90, 0.07em -0.25em 0.4em #F70, 0.09em -0.3em 0.5em #F70, 0.1em -0.3em 0.9em #F50, 0.1em -0.3em 1.0em #F40;
-  }
-  100% {
-    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
-  }
-}
-
-@-webkit-keyframes font-effect-fire-animation-keyframes {
+@keyframes font-effect-fire-animation-keyframes {
   0% {
     text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
   }
@@ -736,15 +736,10 @@ title, head {
   }
 }
 .konami {
-  -moz-animation-duration:0.8s;
-  -moz-animation-name:font-effect-fire-animation-keyframes;
-  -moz-animation-iteration-count:infinite;
-  -moz-animation-direction:alternate;
-  
-  -webkit-animation-duration:0.8s;
-  -webkit-animation-name:font-effect-fire-animation-keyframes;
-  -webkit-animation-iteration-count:infinite;
-  -webkit-animation-direction:alternate;
+  animation-duration:0.8s;
+  animation-name:font-effect-fire-animation-keyframes;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
 
   color: #ffe;
 }
