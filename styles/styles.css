@@ -512,7 +512,7 @@ title, head {
  }
 
  .aside {
-  background-image: url("../images/banner.jpg");
+  background-image: url("../images/banner.jpg?v=2");
   background-size: cover;
   background-color: #020202;
   height: 100vh;
